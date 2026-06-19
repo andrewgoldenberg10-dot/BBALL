@@ -1,0 +1,9 @@
+// Inside your React component
+useEffect(() => {
+  fetch('./players.json')
+    .then(response => response.json())
+    .then(data => {
+      // 'data' now contains all your real NBA players!
+      setAllPlayers(data);
+    });
+}, []);
